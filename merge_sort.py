@@ -27,7 +27,6 @@ def merge(S, S1, S2):
 	return S
 
 
-
 def merge_sort(S):
 	n = len(S)
 	if( n > 1 ):
@@ -41,8 +40,12 @@ def merge_sort(S):
 			merge_sort(S2)
 			return merge(S, S1, S2)
 
-S = [5,6,4,9,1,3]
 
+def main(input_list):
+	output_list = merge_sort(input_list)
+	print("Merge Sort sorted array --> \n", output_list)
 
-
-print("out ---> ", merge_sort(S))
+if __name__ == "__main__":
+	import random_data_generator as rd
+	input_list = rd.random_data_generator()
+	main(input_list)

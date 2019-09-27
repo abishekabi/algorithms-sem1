@@ -1,8 +1,8 @@
 """
 Inplace Quick Sort
+
 """
 
-import random_data_generator as rd
 
 def partition(S, p):
     '''
@@ -66,10 +66,16 @@ def quick_sort_inplace(S, low, high):
         quick_sort_inplace(S, index+1, high)
     return S
 
+def main(input_list):
+    # Initialize for first time
+    start = 0
+    end = len(input_list)-1
+    output_list = quick_sort_inplace(input_list, start, end)
+    print("Quick Sort Inplace version sorted array --> \n", output_list)
 
 
 if __name__ == "__main__":
     #input_list = [ 7, 34, 5, 8, 3, 6, 2, 1, 6, 9]
+    import random_data_generator as rd
     input_list = rd.random_data_generator()
-    print(quick_sort_inplace(input_list, 0, len(input_list)-1))
-    #print(partition_inplace(input_list))
+    main(input_list)

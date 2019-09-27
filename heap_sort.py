@@ -2,7 +2,6 @@
 Min-Heap construction
 
 """
-import random_data_generator as rd
 
 def remove_from_heap(H):
     n = len(H) - 1
@@ -22,19 +21,17 @@ def remove_from_heap(H):
                     j = 2*i
                 else:
                     j = 2*i + 1
-                temp = H[i]
-                H[i] = H[j]
-                H[j] = temp
-                #i = j
+                H[i], H[j] = H[j], H[i]
+                i = j
         # This Node has zero or one internal children
         else:
             # This node has only one internal child or a last node
             if(2*i <= n):
                 if H[i] > H[2*i]:
-                    temp = H[i]
-                    H[i] = H[2*i]
-                    H[2*i] = temp
+                    H[i], H[2*i] = H[2*i], H[i]
                 return removed_element, H
+            #i = 1
+            break
     return removed_element, H
                 
   
@@ -55,9 +52,7 @@ def insert_to_heap(H, e):
     n = len(H)
     i = n - 1
     while i > 1 and H[i] < H[i//2]:
-        temp = H[i]
-        H[i] = H[i//2]
-        H[i//2] = temp
+        H[i], H[i//2] = H[i//2], H[i]
         i = i//2 
     return H
 
@@ -67,18 +62,20 @@ def heap_sort(input_list):
     # Build a min heap
     for e in input_list:
         H = insert_to_heap(H, e)
-    #print(H)
+    #return H
     sorted_list = []
-    for e in input_list:
+    for _ in range(len(input_list)):
         removed_element, H = remove_from_heap(H)
         sorted_list.append(removed_element)
     return sorted_list
 
+def main(input_list):
+    output_list = heap_sort(input_list)
+    print("HeapSort Inplace version sorted array --> \n", output_list)
 
 
 if __name__ == "__main__":
-    input_list = [ 7, 34, 5, 8, 3, 6, 2, 1, 6, 9]
+    #input_list = [ 7, 34, 5, 8, 3, 6, 2, 1, 6, 9]
+    import random_data_generator as rd
     input_list = rd.random_data_generator()
-    #print(input_list)
-    x= heap_sort(input_list)
-    print(x)
+    main(input_list)

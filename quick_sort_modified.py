@@ -1,18 +1,18 @@
 """
 Modified Quicksort
+
 """
-import random_data_generator as rd
 
-def insertion_sort(S, start ,end):
-	for j in range(start, end):
-		key = S[j]
-		i = j-1
-		while i > -1 and S[i] > key:
-			S[i+1] = S[i]
-			i -= 1
-		S[i+1] = key
-	return S
-
+def insertion_sort(S):
+    n = len(S)
+    for j in range(1, n):
+        key = S[j]
+        i = j-1
+        while i > -1 and S[i] > key:
+            S[i+1] = S[i]
+            i -= 1
+        S[i+1] = key
+    return S
 
 
 def median_of_three(S, start, end):
@@ -52,13 +52,20 @@ def quick_sort_modified(S, start, end):
         y = i + 1
         quick_sort_modified(S, start, x)
         quick_sort_modified(S, y, end)
+        return S
     else:
-        S = insertion_sort(S, start, end)
+        S = insertion_sort(S)
         return S
 
+def main(input_list):
+    # Initialize for first time
+    start = 0
+    end = len(input_list)-1
+    output_list = quick_sort_modified(input_list, start, end)
+    print("Quick Sort Modified version sorted array --> \n", output_list)
 
 if __name__ == "__main__":
-    input_list = [7, 34, 5, 8, 3, 6, 2, 1, 6, 9, 10]
-    #input_list = rd.random_data_generator()
-    print(quick_sort_modified(input_list, 0, len(input_list)-1))
-    #print(partition_inplace(S))
+    import random_data_generator as rd
+    #input_list = [7, 34, 5, 8, 3, 6, 2, 1, 6, 9, 10]
+    input_list = rd.random_data_generator()
+    main(input_list)
