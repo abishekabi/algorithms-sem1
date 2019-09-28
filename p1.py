@@ -26,7 +26,6 @@ if __name__ == "__main__":
     #     main(input_size, rd.random_data_generator(input_size))
     SETUP = """from __main__ import time_measure, test"""
     MAIN_CODE = """test(input_list)"""
-
     x= timeit.timeit(
         setup=SETUP,
         stmt=MAIN_CODE,
