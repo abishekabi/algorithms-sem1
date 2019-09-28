@@ -70,12 +70,12 @@ def main(input_list):
     # Initialize for first time
     start = 0
     end = len(input_list)-1
-    output_list = quick_sort_inplace(input_list, start, end)
-    print("Quick Sort Inplace version sorted array --> \n", output_list)
+    return quick_sort_inplace(input_list, start, end)
 
 
 if __name__ == "__main__":
     #input_list = [ 7, 34, 5, 8, 3, 6, 2, 1, 6, 9]
     import random_data_generator as rd
     input_list = rd.random_data_generator()
-    main(input_list)
+    output_list = main(input_list)
+    print("Quick Sort Inplace version sorted array --> \n", output_list)

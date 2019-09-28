@@ -70,12 +70,12 @@ def heap_sort(input_list):
     return sorted_list
 
 def main(input_list):
-    output_list = heap_sort(input_list)
-    print("HeapSort Inplace version sorted array --> \n", output_list)
+    return heap_sort(input_list)
 
 
 if __name__ == "__main__":
     #input_list = [ 7, 34, 5, 8, 3, 6, 2, 1, 6, 9]
     import random_data_generator as rd
     input_list = rd.random_data_generator()
-    main(input_list)
+    output_list = main(input_list)
+    print("HeapSort Inplace version sorted array --> \n", output_list)

@@ -1,0 +1,72 @@
+[
+    {"algo_type": "insertion_sort", "input_size": 1000, "exec_time": 0.04855871399922762
+    },
+    {"algo_type": "merge_sort", "input_size": 1000, "exec_time": 0.0038151680000737542
+    },
+    {"algo_type": "heap_sort", "input_size": 1000, "exec_time": 0.005931319999945117
+    },
+    {"algo_type": "quick_sort_modified", "input_size": 1000, "exec_time": 0.031632464999347576
+    },
+    {"algo_type": "insertion_sort", "input_size": 2000, "exec_time": 0.19075085900112754
+    },
+    {"algo_type": "merge_sort", "input_size": 2000, "exec_time": 0.010044495000329334
+    },
+    {"algo_type": "heap_sort", "input_size": 2000, "exec_time": 0.01405729100042663
+    },
+    {"algo_type": "quick_sort_modified", "input_size": 2000, "exec_time": 0.13087011700008588
+    },
+    {"algo_type": "insertion_sort", "input_size": 4000, "exec_time": 0.7546496359991579
+    },
+    {"algo_type": "merge_sort", "input_size": 4000, "exec_time": 0.018354379999436787
+    },
+    {"algo_type": "heap_sort", "input_size": 4000, "exec_time": 0.029246922000311315
+    },
+    {"algo_type": "quick_sort_modified", "input_size": 4000, "exec_time": 0.5006438129985327
+    },
+    {"algo_type": "insertion_sort", "input_size": 5000, "exec_time": 1.215460957999312
+    },
+    {"algo_type": "merge_sort", "input_size": 5000, "exec_time": 0.022469831001217244
+    },
+    {"algo_type": "heap_sort", "input_size": 5000, "exec_time": 0.03803827299998375
+    },
+    {"algo_type": "quick_sort_modified", "input_size": 5000, "exec_time": 0.7115235620003659
+    },
+    {"algo_type": "insertion_sort", "input_size": 10000, "exec_time": 5.207335113000227
+    },
+    {"algo_type": "merge_sort", "input_size": 10000, "exec_time": 0.052540634000251885
+    },
+    {"algo_type": "heap_sort", "input_size": 10000, "exec_time": 0.09088729299946863
+    },
+    {"algo_type": "quick_sort_modified", "input_size": 10000, "exec_time": 2.6868057449992193
+    },
+    {"algo_type": "insertion_sort", "input_size": 40000, "exec_time": 85.54424028899848
+    },
+    {"algo_type": "merge_sort", "input_size": 40000, "exec_time": 0.22978582900032052
+    },
+    {"algo_type": "heap_sort", "input_size": 40000, "exec_time": 0.45996308399844565
+    },
+    {"algo_type": "quick_sort_modified", "input_size": 40000, "exec_time": 41.07874250399982
+    },
+    {"algo_type": "insertion_sort", "input_size": 50000, "exec_time": 121.74501691799924
+    },
+    {"algo_type": "merge_sort", "input_size": 50000, "exec_time": 0.2780956500009779
+    },
+    {"algo_type": "heap_sort", "input_size": 50000, "exec_time": 0.48832904000119015
+    },
+    {"algo_type": "quick_sort_modified", "input_size": 50000, "exec_time": 86.89574719099983
+    },
+    {"algo_type": "quick_sort_inplace", "input_size": 1000, "exec_time": 0.0028740090001520002
+    },
+    {"algo_type": "quick_sort_inplace", "input_size": 2000, "exec_time": 0.006669422999038943
+    },
+    {"algo_type": "quick_sort_inplace", "input_size": 4000, "exec_time": 0.013643154999954277
+    },
+    {"algo_type": "quick_sort_inplace", "input_size": 5000, "exec_time": 0.01829256900055043
+    },
+    {"algo_type": "quick_sort_inplace", "input_size": 10000, "exec_time": 0.03758699100035301
+    },
+    {"algo_type": "quick_sort_inplace", "input_size": 40000, "exec_time": 0.17742984300093667
+    },
+    {"algo_type": "quick_sort_inplace", "input_size": 50000, "exec_time": 0.24011660699943604
+    }
+]

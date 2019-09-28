@@ -42,10 +42,10 @@ def merge_sort(S):
 
 
 def main(input_list):
-	output_list = merge_sort(input_list)
-	print("Merge Sort sorted array --> \n", output_list)
+	return merge_sort(input_list)
 
 if __name__ == "__main__":
 	import random_data_generator as rd
 	input_list = rd.random_data_generator()
-	main(input_list)
+	output_list = main(input_list)
+	print("Merge Sort sorted array --> \n", output_list)
