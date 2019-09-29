@@ -7,15 +7,18 @@ def insertion_sort(a,low,high):
             j -= 1
         a[j+1] = key
 
-def quick_sort_modified(a,low,high):
+def decide_algo(a,low,high):
    if(low + 10 <= high): 
-      if low < high:
-            pivot = partition(a,low,high)
-            quick_sort_modified(a, low, pivot-1)
-            quick_sort_modified(a, pivot+1, high)
-            return a
+      if low<high:
+          piv = partition(a,low,high)
+          decide_algo(a,low,piv-1)
+          decide_algo(a,piv+1,high)
    else:
       insertion_sort(a,low,high)
+
+def quicksort(a,low,high):
+   decide_algo(a,low,high)
+   return a
 
 def median(a, low, high, median):
   if a[low] < a[high]:
@@ -55,7 +58,7 @@ def main(input_list):
     # Initialize for first time
     start = 0
     end = len(input_list)-1
-    return quick_sort_modified(input_list, start, end)
+    return quicksort(input_list, start, end)
 
 
 if __name__ == "__main__":    
@@ -64,5 +67,5 @@ if __name__ == "__main__":
     input_list = rd.random_data_generator(100)
     print("Input array --> \n", input_list)
     print("-" * 100)
-    output_list = quick_sort_modified(input_list, 0, len(input_list)-1)
+    output_list = quicksort(input_list, 0, len(input_list)-1)
     print("Quick Sort Modified version sorted array --> \n", output_list)

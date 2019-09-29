@@ -76,6 +76,8 @@ def main(input_list):
 if __name__ == "__main__":
     #input_list = [ 7, 34, 5, 8, 3, 6, 2, 1, 6, 9]
     import random_data_generator as rd
-    input_list = rd.random_data_generator()
+    input_list = rd.random_data_generator(100)
+    print("Input array --> \n", input_list)
+    print("-" * 100)
     output_list = main(input_list)
     print("Quick Sort Inplace version sorted array --> \n", output_list)

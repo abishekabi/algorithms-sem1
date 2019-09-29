@@ -19,8 +19,7 @@ def time_measure():
 if __name__ == "__main__":
     input_sizes = (1000, 2000, 4000, 5000, 10000, 40000, 50000)
     algorithm_types = [ insertion_sort, merge_sort, \
-        heap_sort, quick_sort_inplace, \
-            quick_sort_modified ]
+        heap_sort, quick_sort_modified, quick_sort_inplace]
     
     # measure perforance         
     for input_size in input_sizes:
@@ -28,7 +27,7 @@ if __name__ == "__main__":
         for algorithm_type in algorithm_types:
             # number = x where the higher the value of x, \
             # higher the accuracy of code execution time calcualation
-            x= timeit.timeit(time_measure, number=100)
+            x= timeit.timeit(time_measure, number=1)
             d= { 
                 "algo_type": algorithm_type.__name__,
                 "input_size": input_size,

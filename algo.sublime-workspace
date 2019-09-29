@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"i",
+				"i"
+			],
+			[
+				"s",
+				"S1"
+			],
+			[
+				"p",
+				"pdb"
+			],
+			[
+				"m",
+				"merge_sort"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
 				"inpu",
 				"input_list"
 			]
@@ -12,24 +36,87 @@
 	"buffers":
 	[
 		{
-			"file": "test.py",
+			"contents": "# def insertion_sort(unsorted_list):\n#   for i in range(1, len(unsorted_list)):\n#       j = i-1\n#       key = unsorted_list[i]\n#       while unsorted_list[j] > key and j > -1:\n#           unsorted_list[i] = unsorted_list[j]\n#           unsorted_list[j] = key\n#           j -= 1\n\n#       # for j in range(len(unsorted_list)):\n#       #   key = unsorted_list[j]\n#       #   if key > unsorted_list[i]:\n#       #       unsorted_list[j] = unsorted_list[i]\n#       #       unsorted_list[i] = key\n#   return unsorted_list\n\n\n# def insertion_sort_On2(unsorted_list):\n#   for i in range(len(unsorted_list)):\n#       for j in range(len(unsorted_list)):\n#           key = unsorted_list[j]\n#           if key > unsorted_list[i]:\n#               unsorted_list[j] = unsorted_list[i]\n#               unsorted_list[i] = key\n#   return unsorted_list\n\n\n\n\n\ninput=5461\n\nfor i in input: \n    cmp i[1] with i [0]\n\ni = 1,2.....4\n    j = 0,1,,,,,3\n        if a[i] > a[j]\n    \n\n\n    ",
+			"file": "hw1.txt",
+			"file_size": 0,
+			"file_write_time": 132138284388615441,
 			"settings":
 			{
-				"buffer_size": 14,
+				"buffer_size": 957,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "project1/p1_results.json",
+			"settings":
+			{
+				"buffer_size": 3059,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "[{'algo_type': 'insertion_sort', 'input_size': 100"
+			}
+		},
+		{
+			"contents": "\"\"\"\nMerge sort algorithm\n\n\"\"\"\n\ndef merge(S, S1, S2):\n\t#print(S, S1, S2)\n\ti = j = k = 0\n\twhile i < len(S1) and j < len(S2):\n\t\tif ( S1[i] < S2[j] ):\n\t\t\tS[k] = S1[i]\n\t\t\ti += 1\n\t\telse:\n\t\t\tS[k] = S2[j]\n\t\t\tj += 1\n\t\tk += 1\n\twhile i < len(S1): \n\t\tS[k] = S1[i] \n\t\ti+=1\n\t\tk+=1\n\t\t\n\twhile j < len(S2): \n\t\tS[k] = S2[j] \n\t\tj+=1\n\t\tk+=1\n\n\treturn S\n\n\ndef merge_sort(S):\n\tn = len(S)\n\tif( n > 1 ):\n\t\tlow = 0\n\t\thigh = n\n\t\tmid = (low+high)//2  \n\t\tif (low < high):\n\t\t\tS1 = S[0: mid]\n\t\t\tS2 = S[mid: ]\n\t\t\tmerge_sort(S1)\n\t\t\tmerge_sort(S2)\n\t\t\treturn merge(S, S1, S2)\n\n\ndef main(input_list):\n\toutput_list = merge_sort(input_list)\n\tprint(\"Merge Sort sorted array --> \\n\", output_list)\n\nif __name__ == \"__main__\":\n\timport random_data_generator as rd\n\tinput_list = rd.random_data_generator()\n\tmain(input_list)\n",
+			"file": "merge_sort.py",
+			"file_size": 780,
+			"file_write_time": 132140864698643060,
+			"settings":
+			{
+				"buffer_size": 780,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "queue.py",
+			"settings":
+			{
+				"buffer_size": 859,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "#!/bin/python3\n\"\"\"\nInsertion sort algorithm\n\n\ninput=5461\n\nfor i in input: \n\tcmp i[1] with i [0]\n\ni = 1,2.....4\n\tj = 0,1,,,,,3\n\t\tif a[i] > a[j]\n\t\t\t\n\n\n\"\"\"\n# def swap(a,b):\n# a\n\ndef insertion_sort(unsorted_list):\n\tfor i in range(1, len(unsorted_list)):\n\t\tj = i-1\n\t\twhile unsorted_list[i] < unsorted_list[j]:\n\t\t\tunsorted_list[i] = unsorted_list[j]\n\t\t\tunsorted_list[j] = unsorted_list[i]\n\t\tprint unsorted_list\n\ninput_list = [5,4,6,1,0]\n\nprint(\"out ---> \", insertion_sort(input_list))\n\n\n\n",
-			"file": "insertion_sort.py",
-			"file_size": 429,
-			"file_write_time": 132120033129039808,
+			"file": "test.py",
 			"settings":
 			{
-				"buffer_size": 482,
+				"buffer_size": 120,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#!/bin/python3\n\"\"\"\nInsertion sort algorithm\n\n\"\"\"\n\ndef insertion_sort(input_list):\n\tn = len(input_list)\n\tfor j in range(1, n):\n\t\tkey = input_list[j]\n\t\ti = j-1\n\t\twhile i > -1 and input_list[i] > key:\n\t\t\tinput_list[i+1] = input_list[i]\n\t\t\ti -= 1\n\t\tinput_list[i+1] = key\n\treturn input_list\n\n\ndef main(input_list):\n\treturn insertion_sort(input_list)\n\nif __name__ == \"__main__\":\n\timport random_data_generator as rd\n\tinput_list = rd.random_data_generator()\n\toutput_list = main(input_list)\n\tprint(\"Insertion Sort Inplace version sorted array --> \\n\", output_list)\n\n\n",
+			"file": "insertion_sort.py",
+			"file_size": 558,
+			"file_write_time": 132140881851473343,
+			"settings":
+			{
+				"buffer_size": 558,
+				"encoding": "UTF-8",
 				"line_ending": "Unix",
 				"name": "\"\"\""
+			}
+		},
+		{
+			"file": "stack.py",
+			"settings":
+			{
+				"buffer_size": 170,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\"\"\" \nGenerate random data for testing\n\"\"\"\n\ndef random_data_generator(data_range = 1000):\n\timport random\n\toutput_list = []\n\tfor _ in range(data_range):\n\t\toutput_list.append(random.randint(1, data_range))\n\treturn output_list \n",
+			"file": "random_data_generator.py",
+			"file_size": 224,
+			"file_write_time": 132140878229270290,
+			"settings":
+			{
+				"buffer_size": 224,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -85,7 +172,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -99,6 +186,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"f"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -121,11 +209,127 @@
 			[
 				{
 					"buffer": 0,
+					"file": "hw1.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 957,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								957,
+								957
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 201.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "project1/p1_results.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3059,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"auto_name": "[{'algo_type': 'insertion_sort', 'input_size': 100",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "merge_sort.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 780,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								332,
+								332
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 43.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "queue.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 859,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								822,
+								822
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 250.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "test.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14,
+						"buffer_size": 120,
 						"regions":
 						{
 						},
@@ -144,36 +348,93 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 5,
 					"file": "insertion_sort.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 482,
+						"buffer_size": 558,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								146,
-								146
+								554,
+								554
 							]
 						],
 						"settings":
 						{
 							"auto_name": "\"\"\"",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 374.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "stack.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "random_data_generator.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 224,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								222,
+								222
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -181,7 +442,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -222,7 +483,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 0.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
