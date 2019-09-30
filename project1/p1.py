@@ -8,6 +8,8 @@ import insertion_sort, merge_sort, \
 import timeit, time
 # Random number generator
 import random_data_generator as rd
+import sys
+sys.setrecursionlimit(100000)
 
 global input_size, input_list, algorithm_type, algorithm_performance_time
 
@@ -22,8 +24,12 @@ if __name__ == "__main__":
         heap_sort, quick_sort_modified, quick_sort_inplace]
     
     # measure perforance         
-    for input_size in input_sizes:
+    for input_size in input_sizes[4:5]:
         input_list = rd.random_data_generator(input_size)
+        # sorted array
+        #input_list = [x for x in range(input_size)]
+        # reverse sorted array
+        #input_list = [x for x in range(input_size, 0, -1)]
         for algorithm_type in algorithm_types:
             # number = x where the higher the value of x, \
             # higher the accuracy of code execution time calcualation
