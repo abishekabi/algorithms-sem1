@@ -3,9 +3,11 @@ All programs run on python 3
 
 
 To execute a program:
+</br>
 
 `python <file-name>`
 
+</br>
 
 Eg: 
 `>> python heap_sort.py`
@@ -28,6 +30,7 @@ or
 </br>
 
 To measure the performance of all the 5 programs execute the program "p1.py"
+</br>
 `>> python p1.py`
 
 </br>
